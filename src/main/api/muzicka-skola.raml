@@ -1,0 +1,132 @@
+#%RAML 1.0
+title: Muzicka Skola
+version: v1.0
+
+types:
+  ProfesorType: !include types/profesor.raml
+  UcenikType: !include types/ucenik.raml
+  
+/ucenici:
+  get:
+    displayName: Get ID
+    queryParameters:
+      UcenikID:
+        displayName: Get ID
+        required: false
+    responses:
+      200:
+        body:
+          application/json:
+            type: UcenikType[]
+      400:
+        body:
+          application/json:
+            example:
+              message: Error while retrieving data from the Ucenik database 
+  post:
+    body:
+      application/json:
+        type: UcenikType
+    
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              message: Ucenik successfully added.
+      400:
+        body:
+          application/json:
+            example:
+              message: Error while creating Ucenik
+      409:
+        body:
+          application/json:
+            example:
+              message: Ucenik with that JMBG already exists
+  /{UcenikID}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              type: UcenikType
+        404:
+          body:
+            application/json:
+              example:
+                message: No Ucenik with that id
+    put:
+      body:
+        application/json:
+          type: UcenikType
+      responses:
+        400:
+          body:
+            application/json:
+              example:
+                message: Bad Request
+    delete:
+      responses:
+        200:
+          body:
+            application/json:
+              type: UcenikType
+        404:
+          body:
+            application/json:
+              example:
+                message: No Ucenik with that id
+/profesori:
+  get:
+    displayName: Get ID
+    queryParameters:
+      ProfesorID:
+        displayName: Get ID
+        required: false
+    responses:
+      200:
+        body:
+          application/json:
+            type: ProfesorType[]
+  post:
+    body:
+      application/json:
+        type: ProfesorType
+    responses:
+      201:
+        body:
+          application/json:
+            type: ProfesorType
+      400:
+          body:
+            application/json:
+              example:
+                message: Bad request
+  /{ProfesorID}:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              type: ProfesorType
+        404:
+          body:
+            application/json:
+              example:
+                message: Profesor with that id does not exist
+    put:
+      body:
+        application/json:
+          type: ProfesorType
+    delete:
+      responses:
+        200:
+          body:
+            application/json:
+              type: ProfesorType
+        404:
+          body:
+            application/json:
+              example:
+                message: Profesor with that id does not exist

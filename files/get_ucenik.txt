@@ -1,0 +1,45 @@
+{
+  "UcenikID": [
+    1
+  ],
+  "UcenikIme": [
+    "Sebastian"
+  ],
+  "UcenikPrezime": [
+    "Dudas"
+  ],
+  "UcenikJMBG": [
+    "2009997800138"
+  ],
+  "UcenikDatumRodjenja": [
+    "2019-02-02"
+  ],
+  "ProfesorID": [
+    1
+  ],
+  "Active": [
+    true
+  ]
+}{
+  "UcenikID": [
+    1
+  ],
+  "UcenikIme": [
+    "Sebastian"
+  ],
+  "UcenikPrezime": [
+    "Dudas"
+  ],
+  "UcenikJMBG": [
+    "2009997800138"
+  ],
+  "UcenikDatumRodjenja": [
+    "2019-02-02"
+  ],
+  "ProfesorID": [
+    1
+  ],
+  "Active": [
+    true
+  ]
+}[{"Active":true,"UcenikDatumRodjenja":"2019-02-02","UcenikJMBG":"2009997800138","ProfesorID":1,"UcenikIme":"Sebastian","UcenikPrezime":"Dudas","UcenikID":1}][{"Active":true,"UcenikDatumRodjenja":"2019-02-02","UcenikJMBG":"2009997800138","ProfesorID":1,"UcenikIme":"Sebastian","UcenikPrezime":"Dudas","UcenikID":1}]
